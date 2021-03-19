@@ -1,20 +1,21 @@
 
 import React, { useState, useEffect, FC } from 'react';
-import { useHistory } from 'react-router-dom';
+import { RouteComponentProps, useHistory } from 'react-router-dom';
 import { task } from "../../../../utils";
 
-const Add: FC = ({ match }) => {
+
+const Add: FC<RouteComponentProps<{ id: string }>> = ({ match }) => {
     const [title, setTitle] = useState(' ');
     const [date, setDate] = useState(' ');
     const [assigned, setAssigned] = useState(' ');
     const [info, setInfo] = useState(' ');
     const [textBtn, setTextBtn] = useState('Add');
     const [isLoading, setIsLoading] = useState(false);
-    const [msj, setMsj] = useState(null);
+    const [msj, setMsj] = useState<string | null>(null);
     const history = useHistory();
 
+    const { id } = match.params
 
-    const id = match.params.id;
     const createTask = async () => {
         await task.post({ title, date, assigned, info, status: "pendiente" });
         exito()

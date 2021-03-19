@@ -18,7 +18,7 @@ const Aside: FC = () => {
                             aria-expanded="false"
                             aria-controls="collapseUsers"
                         >
-                            <i class="bi bi-person"></i> Users
+                            <i className="bi bi-person"></i> Users
             </button>
                     </div>
                     <div
@@ -43,7 +43,7 @@ const Aside: FC = () => {
                             aria-expanded="false"
                             aria-controls="collapseTasks"
                         >
-                            <i class="bi bi-card-list"></i> Task
+                            <i className="bi bi-card-list"></i> Task
             </button>
                     </div>
                     <div
@@ -68,7 +68,7 @@ const Aside: FC = () => {
                             aria-expanded="false"
                             aria-controls="collapseSettings"
                         >
-                            <i class="bi bi-sliders"></i> Settigns
+                            <i className="bi bi-sliders"></i> Settigns
             </button>
                     </div>
                     <div

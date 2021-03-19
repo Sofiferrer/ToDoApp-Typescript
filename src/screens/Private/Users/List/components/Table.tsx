@@ -1,7 +1,12 @@
 import React, { FC } from 'react';
 import { Row } from './Row';
 
-const Table: FC = ({ rows, onRemoveItem }) => {
+interface Props {
+    rows: [],
+    onRemoveItem: () => void
+}
+
+const Table: FC<Props> = ({ rows, onRemoveItem }) => {
     return (
         <table className="table table-striped">
             <thead>

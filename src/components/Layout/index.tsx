@@ -3,7 +3,13 @@ import React, { FC } from 'react';
 import { Aside, Header, Footer } from './components';
 import './styles.css';
 
-const Layout: FC = ({ children, hideHeader, hideAside, hideFooter }) => {
+interface Props {
+    hideHeader?: boolean,
+    hideAside?: boolean,
+    hideFooter?: boolean
+}
+
+const Layout: FC<Props> = ({ children, hideHeader = false, hideAside = false, hideFooter = false }) => {
     return (
         <div className='layout'>
             {hideAside === false && <Aside />}
@@ -15,11 +21,5 @@ const Layout: FC = ({ children, hideHeader, hideAside, hideFooter }) => {
         </div>
     );
 }
-
-Layout.defaultProps = {
-    hideHeader: false,
-    hideAside: false,
-    hideFooter: false,
-};
 
 export { Layout }

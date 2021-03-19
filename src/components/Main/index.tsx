@@ -9,9 +9,9 @@ const Main: FC = ({ children }) => {
         <>
             {/* JSX */}
 
-            < main className="main bg-light" > {children} < /main>
-            < />
+            <main className="main bg-light">{children}</main>
+        </>
     );
 };
 
-export {Main};
+export { Main };
