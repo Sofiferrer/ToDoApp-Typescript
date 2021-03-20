@@ -1,7 +1,15 @@
 import { api } from './api';
 import { objectToArray } from '../../helpers';
 
-type AddTaskPayload = { title: string, date: string, assigned: string, info: string, status: string }
+type Task = {
+    title: string,
+    date: string,
+    assigned: string,
+    info: string,
+    status: string
+}
+
+type AddTaskPayload = Task
 
 const post = async (task: AddTaskPayload) => {
     await api({
@@ -29,7 +37,7 @@ const get = async () => {
     return objectToArray(data.data);
 }
 
-type UpdateTaskPayload = AddTaskPayload
+type UpdateTaskPayload = Omit<Task, 'status'> | Pick<Task, 'status'>
 
 const patch = async (id: string, task: UpdateTaskPayload) => {
     await api({
