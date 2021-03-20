@@ -4,9 +4,20 @@ import { task } from '../../../../../utils/api/task';
 import { Link } from 'react-router-dom';
 import { CgSandClock, CgCheckO, CgCloseO, CgPen } from "react-icons/cg";
 
-const Task: FC = ({ data: { title, assigned, date, info, id, status } }) => {
+interface Props {
+    data: {
+        title: string,
+        assigned: string,
+        date: string,
+        info: string,
+        id: string,
+        status: string
+    },
+}
+
+const Task: FC<Props> = ({ data: { title, assigned, date, info, id, status } }) => {
     const [state, setState] = useState(status);
-    const updateStatus = (status) => {
+    const updateStatus = (status: string) => {
         setState(status);
         task.patch(id, { status })
     }

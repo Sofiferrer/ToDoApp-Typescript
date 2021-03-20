@@ -16,32 +16,32 @@ const SignUp: FC = () => {
                 <div className='col-6 formulario py-3'>
                     <div className="row mb-3 d-flex justify-content-center ">
                         <div className="col-10">
-                            <label for="name" className="form-label">Name</label>
+                            <label htmlFor="name" className="form-label">Name</label>
                             <input type="text" name="name" className="form-control" id="name" placeholder="Name" value={name} onChange={(event) => setName(event.target.value)} />
                         </div>
                     </div>
                     <div className="row mb-3 d-flex justify-content-center">
                         <div className="col-10">
-                            <label for="exampleFormControlInput1" className="form-label">lastName</label>
+                            <label htmlFor="exampleFormControlInput1" className="form-label">lastName</label>
                             <input type="text" name="lastname" className="form-control" id="exampleFormControlInput1" value={lastname} onChange={(event) => setLastname(event.target.value)} placeholder="Lastname" />
                         </div>
                     </div>
                     <div className="row mb-3 d-flex justify-content-center">
                         <div className="col-10">
-                            <label for="exampleFormControlInput1" className="form-label">Email</label>
+                            <label htmlFor="exampleFormControlInput1" className="form-label">Email</label>
                             <input type="email" name="email" className="form-control" id="exampleFormControlInput1" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="Email" />
                         </div>
                     </div>
                     <div className="row mb-3 d-flex justify-content-center">
                         <div className="col-10">
-                            <label for="exampleFormControlTextarea1" className="form-label">Password</label>
+                            <label htmlFor="exampleFormControlTextarea1" className="form-label">Password</label>
                             <input type={showPassword ? "text" : "password"} name="password" className="form-control" id="exampleFormControlInput1" value={password} onChange={(event) => setPassword(event.target.value)} placeholder="Password" />
                             <button type="button" onClick={() => setShowPassword(!showPassword)} className="btn btn-primary col-2">ver</button>
                         </div>
                     </div>
                     <div className="row mb-3 d-flex justify-content-center">
                         <div className="col-10">
-                            <label for="exampleFormControlTextarea1" className="form-label">Repeat Password</label>
+                            <label htmlFor="exampleFormControlTextarea1" className="form-label">Repeat Password</label>
                             <input type={showPassword ? "text" : "password"} name="password" className="form-control" id="exampleFormControlInput1" value={repeatPassword} onChange={(event) => setRepeatPassword(event.target.value)} placeholder="Repeat Password" />
                             <button type="button" onClick={() => setShowPassword(!showPassword)} className="btn btn-primary col-2">ver</button>
                         </div>

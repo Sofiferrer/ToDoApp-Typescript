@@ -7,9 +7,9 @@ import { Task } from './components/Task';
 const List: FC = () => {
     const [tasks, setTasks] = useState([]);
 
-    useEffect(async () => {
-        setTasks(await task.get());
-    }, []);
+    /*useEffect (() => {
+        setTasks(task.get());
+    }, []);*/
 
     console.log(tasks);
     return (
